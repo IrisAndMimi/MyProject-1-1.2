@@ -19,7 +19,7 @@ public class GameTester2 {
 			}
 			if (pos<=row*col-1&&gamovr==false){
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("目前所在位置: "+pos);
+			System.out.println("目前所在位置: "+pos+"	當前血量: "+hp);
 			String UsrAct = scanner.nextLine();
 			n = Integer.parseInt(UsrAct);
 				switch(n){
@@ -27,40 +27,40 @@ public class GameTester2 {
 					System.out.println("向下");
 					if ((pos/col)<row-1){
 						pos = pos+col;
-						System.out.println(pos);
+						hp =hp-5;
 					}else{
 						hp = hp-30;
-						System.out.println("減血30,血量剩餘: "+hp);
+						System.out.println("減血30");
 					}
 					break;
 				case 4:
 					System.out.println("向左");
 					if ((pos%col)!=0){
 						pos = pos-1;
-						System.out.println(pos);
+						hp =hp-5;
 					}else{
 						hp = hp-30;
-						System.out.println("減血30,血量剩餘: "+hp);
+						System.out.println("減血30");
 					}
 					break;
 				case 6:
 					System.out.println("向右");
 					if ((pos%col)!=(col-1)){
 						pos = pos+1;
-						System.out.println(pos);
+						hp =hp-5;
 					}else{
 						hp = hp-30;
-						System.out.println("減血30,血量剩餘: "+hp);
+						System.out.println("減血30");
 					}
 					break;
 				case 8:
 					System.out.println("向上");
 					if (pos/col>0){
 						pos = pos-col;
-						System.out.println(pos);
+						hp =hp-5;
 					}else{
 						hp = hp-30;
-						System.out.println("減血30,血量剩餘: "+hp);
+						System.out.println("減血30");
 					}
 					break;
 				case 5:
