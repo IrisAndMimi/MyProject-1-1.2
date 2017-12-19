@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class DayOfYear {
 
 	public static void main(String[] args) {
-		int n = 32;
+		int n = 12;		//今年的第n天是幾月記號
 		int months[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		for (int i=0; i<months.length; i++){
 			if( n <= months[i]){
