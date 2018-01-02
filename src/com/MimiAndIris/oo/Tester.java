@@ -1,5 +1,7 @@
 package com.MimiAndIris.oo;
 
+import com.MimiAndIris.aa.GraduateStudent;
+
 public class Tester {
 
 	public static void main(String[] args) {

@@ -1,7 +1,11 @@
 package com.MimiAndIris.oo;
 
 public class Student {
-	int english;
+	/* public誰都能用
+	 * private只有這個class能使用
+	 * 沒寫 在同一個package才能用
+	 * 但是protected能讓繼承使用 	*/
+	private int english;
 	int math;
 	int chinese;
 	String name;
