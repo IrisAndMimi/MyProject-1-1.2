@@ -5,11 +5,11 @@ public class Student {
 	 * private只有這個class能使用
 	 * 沒寫 在同一個package才能用
 	 * 但是protected能讓繼承使用 	*/
-	private int english;
-	int math;
-	int chinese;
+	protected int english;
+	protected int math;
+	protected int chinese;
 	String name;
-	static int pass = 60;
+	protected static int pass = 60;
 	
 	public Student(){
 		
