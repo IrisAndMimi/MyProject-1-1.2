@@ -18,7 +18,7 @@ public class Tester {
 		}
 /*程式分隔*/System.out.println();
 //		Customer nc = new Customer(1000);
-//		System.out.print(nc.amount+" ");
+//		System.out.p0rint(nc.amount+" ");
 //		nc.print();
 //		
 //		SliverCustomer sc = new SliverCustomer(1000);
