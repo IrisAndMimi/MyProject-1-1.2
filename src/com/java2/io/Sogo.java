@@ -11,6 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.MimiAndIris.sogo.Customer;
+import com.MimiAndIris.sogo.GoldenCustomer;
+import com.MimiAndIris.sogo.SliverCustomer;
+
 public class Sogo {
 	Scanner scanner = new Scanner(System.in);
 
@@ -53,21 +57,21 @@ public class Sogo {
 					e.printStackTrace();
 				}
 				// report
-//				for (Sales sales: list){
-//					Customer customer = null;
-//					switch(sales.type){
-//					case 1: 
-//						customer = new Customer(sales.getAmount());
-//						break;
-//					case 2:
-//						customer = new SilverCustomer(sales.getAmount());
-//						break;
-//					case 3:
-//						customer = new GoldenCustomer(sales.getAmount());
-//						break;
-//					}
-//					customer.print();
-//				}
+				for (Sales sales: list){
+					Customer customer = null;
+					switch(sales.type){
+					case 1: 
+						customer = new Customer(sales.getAmount());
+						break;
+					case 2:
+						customer = new SliverCustomer(sales.getAmount());
+						break;
+					case 3:
+						customer = new GoldenCustomer(sales.getAmount());
+						break;
+					}
+					customer.print();
+				}
 				
 				
 				break;
