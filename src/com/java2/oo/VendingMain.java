@@ -11,10 +11,14 @@ public class VendingMain {
 		try {
 			fr = new FileReader("vending.txt");
 			BufferedReader br = new BufferedReader(fr);
-			System.out.println(br.readLine());
+			String[] ary = br.readLine().split(","); 
+			for (int i = 0; i < ary.length; i++) { 
+				System.out.println(ary[i]); 
+			} 
+
 			
 		} catch (Exception e) {
-
+			System.out.println(e);
 		}
 	}
 
