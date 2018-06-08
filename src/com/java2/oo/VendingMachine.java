@@ -29,10 +29,14 @@ public class VendingMachine {
 		}
 	}
 	public void coincheck(){
+		int ckd=0;
 		for (int i=0; i<drinks.size(); i++){
 			Drink drink = drinks.get(i);
-			if (tot>=drink.getPrice()){
-				System.out.println("現在可選擇:"+drink.getName());
+			if (tot>=drink.getPrice()&& ckd ==0){
+				System.out.print("現在可選擇:"+drink.getName());
+				ckd=1;
+			}else if(tot>=drink.getPrice()) {
+				System.out.print(" or "+drink.getName());
 			}
 		}
 		
