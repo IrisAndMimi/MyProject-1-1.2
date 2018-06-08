@@ -21,11 +21,7 @@ public class VendingMain {
 				vm.drinks.add(new Drink(id, name, price));
 			}
 			vm.on();
-			
-//			for (int i = 0; i < ary.length; i++) { 
-//				System.out.println(ary[i]); 
-//				
-//			} 
+
 		} catch (Exception e) {
 			System.out.println(e);
 		}	
