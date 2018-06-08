@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class VendingMachine {
 	int tot = 0;
+	int ckd=0;
 	List<Drink> drinks = new ArrayList<>();
 	public void on(){
 		for (int i=0; i<drinks.size(); i++){
@@ -25,21 +26,33 @@ public class VendingMachine {
 					tot = tot+coin;
 					System.out.println("已投入:"+tot);
 					coincheck();
+					if(ckd>0) {
+						chsdrink();
+						break;
+					}
+					
 			}
 		}
 	}
 	public void coincheck(){
-		int ckd=0;
 		for (int i=0; i<drinks.size(); i++){
 			Drink drink = drinks.get(i);
-			if (tot>=drink.getPrice()&& ckd ==0){
+			if (tot>=drink.getPrice()&& ckd==0){
 				System.out.print("現在可選擇:"+drink.getName());
 				ckd=1;
-			}else if(tot>=drink.getPrice()) {
+			}else if(tot>=drink.getPrice()&& ckd!=0) {
 				System.out.print(" or "+drink.getName());
+				ckd=2;
 			}
-		}
+		} 
 	}
-	
+	public void chsdrink() {
+			System.out.println();
+			System.out.println("是否繼續投幣?");
+			if (""=="y") {
+				System.out.println("ouo");
+			}
+		
+	}
 	
 }
