@@ -9,11 +9,11 @@ public class VendingMachine {
 	int tot = 0;
 	List<Drink> drinks = new ArrayList<>();
 	public void on(){
-		System.out.println("請投入硬幣...");
 		for (int i=0; i<drinks.size(); i++){
 			Drink drink = drinks.get(i);
 			System.out.println(drink.getId() + "." + drink.getName() + "---" + drink.getPrice());
 		}
+		System.out.println("請投入硬幣...");
 		Scanner scanner = new Scanner(System.in);
 		int coin = -1;
 		while (coin != 0){
@@ -39,6 +39,7 @@ public class VendingMachine {
 				System.out.print(" or "+drink.getName());
 			}
 		}
-		
 	}
+	
+	
 }
