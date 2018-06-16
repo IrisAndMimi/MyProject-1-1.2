@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class VendingMachine {
 	int tot = 0;
 	int ckd=0;
+	Scanner scanner = new Scanner(System.in);
 	List<Drink> drinks = new ArrayList<>();
 	public void on(){
 		for (int i=0; i<drinks.size(); i++){
@@ -15,8 +16,8 @@ public class VendingMachine {
 			System.out.println(drink.getId() + "." + drink.getName() + "---" + drink.getPrice());
 		}
 		System.out.println("請投入硬幣...");
-		Scanner scanner = new Scanner(System.in);
 		int coin = -1;
+		String usrkin;
 		while (coin != 0){
 			coin = scanner.nextInt();
 			switch(coin){
@@ -47,10 +48,14 @@ public class VendingMachine {
 		} 
 	}
 	public void chsdrink() {
+			String usrkin;
 			System.out.println();
 			System.out.println("是否繼續投幣?");
-			if (""=="y") {
+			usrkin = scanner.next();
+			if (usrkin=="y") {
 				System.out.println("ouo");
+			}else {
+				System.out.println("-u-");
 			}
 		
 	}
