@@ -10,12 +10,15 @@ public class BingoMain {
 	public static void main(String[] args) {
 		VendingMachine vm = new VendingMachine();
 		FileReader fr;
+		BufferedReader br;
+		Random rd = new Random();
+		int ary,chsd,chsdval,tmp;
+//		將讀取的第一部分轉進int,被選擇交換的矩陣編號,被選擇交換的矩陣數值,暫存i數值
 		try {
 			fr = new FileReader("bingo.txt");
-			BufferedReader br = new BufferedReader(fr);
-			int ary = Integer.parseInt(br.readLine()); 
-//			System.out.println(ary);
-			Random rd = new Random();
+			br = new BufferedReader(fr);
+			ary = Integer.parseInt(br.readLine()); 
+			System.out.println(ary);
 			
 //			int bgo[] = new int[]{};
 			ArrayList<Integer> bgo = new ArrayList<Integer>();
@@ -23,9 +26,9 @@ public class BingoMain {
 				bgo.add(i);
 			}
 			for(int i=0; i < bgo.size(); i ++){
-				int chsd = rd.nextInt(9);
-				int chsdval = bgo.get(chsd);
-				int tmp = bgo.get(i);
+				chsd = rd.nextInt(9);
+				chsdval = bgo.get(chsd);
+				tmp = bgo.get(i);
 				bgo.set(i, chsdval);
 				bgo.set(chsd, tmp);
 			}
