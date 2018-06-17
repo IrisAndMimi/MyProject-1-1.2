@@ -50,15 +50,17 @@ public class VendingMachine {
 	public void chsdrink() {
 			String usrkin;
 			System.out.println();
-			System.out.println("是否繼續投幣?");
+			System.out.println("是否繼續投幣?(y/n)");
 			usrkin = scanner1.nextLine();
 			switch(usrkin) {
 				case "y":
 					System.out.println("ouo");
 					break;
-				default:
-					System.out.println("-u-");
+				case "n":
+					System.out.println("請選擇飲料類型-u-");
 					break;
+				default:
+					System.out.println("不要亂打字-u-");
 			}
 		
 	}
