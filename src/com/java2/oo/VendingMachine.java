@@ -9,6 +9,7 @@ public class VendingMachine {
 	int tot = 0;
 	int ckd=0;
 	Scanner scanner = new Scanner(System.in);
+	Scanner scanner1 = new Scanner(System.in);
 	List<Drink> drinks = new ArrayList<>();
 	public void on(){
 		for (int i=0; i<drinks.size(); i++){
@@ -29,9 +30,8 @@ public class VendingMachine {
 					coincheck();
 					if(ckd>0) {
 						chsdrink();
-						break;
 					}
-					
+					break;
 			}
 		}
 	}
@@ -51,11 +51,14 @@ public class VendingMachine {
 			String usrkin;
 			System.out.println();
 			System.out.println("是否繼續投幣?");
-			usrkin = scanner.next();
-			if (usrkin=="y") {
-				System.out.println("ouo");
-			}else {
-				System.out.println("-u-");
+			usrkin = scanner1.nextLine();
+			switch(usrkin) {
+				case "y":
+					System.out.println("ouo");
+					break;
+				default:
+					System.out.println("-u-");
+					break;
 			}
 		
 	}
