@@ -20,7 +20,10 @@ public class BingoMain {
 			ary = Integer.parseInt(br.readLine()); 
 			String[] usrchs = br.readLine().split(","); 
 //			System.out.println(ary);
-			System.out.println(usrchs);
+			
+//			for(int i=0; i < usrchs.length; i ++){
+//				System.out.print(usrchs[i]+" ");
+//			}
 			
 //			int bgo[] = new int[]{};
 			ArrayList<Integer> bgo = new ArrayList<Integer>();
