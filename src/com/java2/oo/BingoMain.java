@@ -13,20 +13,22 @@ public class BingoMain {
 		BufferedReader br;
 		Random rd = new Random();
 		int ary,chsd,chsdval,tmp;
-//		將讀取的第一部分轉進int,被選擇交換的矩陣編號,被選擇交換的矩陣數值,暫存i數值
+//	將讀取的第一部分轉進int,被選擇交換的矩陣編號,被選擇交換的矩陣數值,暫存i數值
 		try {
 			fr = new FileReader("bingo.txt");
 			br = new BufferedReader(fr);
 			ary = Integer.parseInt(br.readLine()); 
-			System.out.println(ary);
+			String[] usrchs = br.readLine().split(","); 
+//			System.out.println(ary);
+			System.out.println(usrchs);
 			
 //			int bgo[] = new int[]{};
 			ArrayList<Integer> bgo = new ArrayList<Integer>();
-			for(int i=1; i<11;i++){
+			for(int i=1; i<ary+1;i++){
 				bgo.add(i);
 			}
 			for(int i=0; i < bgo.size(); i ++){
-				chsd = rd.nextInt(9);
+				chsd = rd.nextInt(ary-1);
 				chsdval = bgo.get(chsd);
 				tmp = bgo.get(i);
 				bgo.set(i, chsdval);
