@@ -3,6 +3,7 @@ package com.java2.oo;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class BingoMain {
@@ -17,13 +18,17 @@ public class BingoMain {
 		try {
 			fr = new FileReader("bingo.txt");
 			br = new BufferedReader(fr);
-			ary = Integer.parseInt(br.readLine()); 
-			String[] usrchs = br.readLine().split(","); 
-//			System.out.println(ary);
+			ary = Integer.parseInt(br.readLine());
+			System.out.println(ary);
+			String[] usrchs = br.readLine().split(",");
+			ArrayList<Integer> uchs = new ArrayList<Integer>();
 			
-//			for(int i=0; i < usrchs.length; i ++){
-//				System.out.print(usrchs[i]+" ");
-//			}
+			
+			for(int i=0; i < usrchs.length; i ++){
+				System.out.print(usrchs[i]+" ");
+			}
+			System.out.println();
+			System.out.println(Arrays.binarySearch(usrchs, "10"));
 			
 //			int bgo[] = new int[]{};
 			ArrayList<Integer> bgo = new ArrayList<Integer>();
