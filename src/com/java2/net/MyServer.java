@@ -25,7 +25,8 @@ public class MyServer {
 			System.out.println(command+"/"+option);
 		} catch (IOException e) {
 			e.printStackTrace();
-}
+			System.out.println("Error, Please info service");
+		}
 	}
 
 }
