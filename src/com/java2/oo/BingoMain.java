@@ -12,6 +12,8 @@ public class BingoMain {
 		VendingMachine vm = new VendingMachine();
 		FileReader fr;
 		BufferedReader br;
+		ArrayList<Integer> uchs,bgo;
+//		使用者選中的賓果,整張賓果卡
 		Random rd = new Random();
 		int ary,chsd,chsdval,tmp;
 //	將讀取的第一行轉進int,被選擇交換的矩陣元素編號,被選擇交換的矩陣元素數值,暫存編號i數值
@@ -22,18 +24,17 @@ public class BingoMain {
 			ary = Integer.parseInt(br.readLine());
 			System.out.println(ary);
 			String[] usrchs = br.readLine().split(",");
-			ArrayList<Integer> uchs = new ArrayList<Integer>();
-			
-			
+			uchs = new ArrayList<Integer>();
 			for(int i=0; i < usrchs.length; i ++){
-				System.out.print(usrchs[i]+" ");
-				uchs.add(Integer.parseInt(usrchs[i]));
+				uchs.add(Integer.parseInt(usrchs[i]) );
 			}
-//			System.out.println();
-//			System.out.println(Arrays.binarySearch(usrchs, "10"));
 			System.out.println(uchs);
+			
+			
+//			System.out.println(Arrays.binarySearch(usrchs, "10"));
+			
 //			int bgo[] = new int[]{};
-			ArrayList<Integer> bgo = new ArrayList<Integer>();
+			bgo = new ArrayList<Integer>();
 			for(int i=1; i<ary+1;i++){
 				bgo.add(i);
 			}
