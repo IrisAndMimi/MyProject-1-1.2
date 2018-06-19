@@ -14,7 +14,8 @@ public class BingoMain {
 		BufferedReader br;
 		Random rd = new Random();
 		int ary,chsd,chsdval,tmp;
-//	將讀取的第一部分轉進int,被選擇交換的矩陣編號,被選擇交換的矩陣數值,暫存i數值
+//	將讀取的第一行轉進int,被選擇交換的矩陣元素編號,被選擇交換的矩陣元素數值,暫存編號i數值
+		
 		try {
 			fr = new FileReader("bingo.txt");
 			br = new BufferedReader(fr);
