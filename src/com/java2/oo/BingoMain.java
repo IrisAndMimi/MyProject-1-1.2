@@ -27,10 +27,11 @@ public class BingoMain {
 			
 			for(int i=0; i < usrchs.length; i ++){
 				System.out.print(usrchs[i]+" ");
+				uchs.add(Integer.parseInt(usrchs[i]));
 			}
-			System.out.println();
-			System.out.println(Arrays.binarySearch(usrchs, "10"));
-			
+//			System.out.println();
+//			System.out.println(Arrays.binarySearch(usrchs, "10"));
+			System.out.println(uchs);
 //			int bgo[] = new int[]{};
 			ArrayList<Integer> bgo = new ArrayList<Integer>();
 			for(int i=1; i<ary+1;i++){
