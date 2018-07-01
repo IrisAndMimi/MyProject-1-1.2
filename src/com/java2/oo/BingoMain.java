@@ -9,7 +9,6 @@ import java.util.Random;
 public class BingoMain {
 
 	public static void main(String[] args) {
-		VendingMachine vm = new VendingMachine();
 		FileReader fr;
 		BufferedReader br;
 		ArrayList<Integer> uchs,bgo;
@@ -17,21 +16,19 @@ public class BingoMain {
 		Random rd = new Random();
 		int ary,chsd,chsdval,tmp;
 //	將讀取的第一行轉進int,被選擇交換的矩陣元素編號,被選擇交換的矩陣元素數值,暫存編號i數值
-		
 		try {
 			fr = new FileReader("bingo.txt");
 			br = new BufferedReader(fr);
 			ary = Integer.parseInt(br.readLine());
 			System.out.println(ary);
-			
+//		儲存選中號碼
 			String[] usrchs = br.readLine().split(",");
 			uchs = new ArrayList<Integer>();
 			for(int i=0; i < usrchs.length; i ++){
 				uchs.add(Integer.parseInt(usrchs[i]) );
 			}
 			System.out.println(uchs);
-			
-			
+//		乾淨有序的賓果卡
 			bgo = new ArrayList<Integer>();
 			for(int i=1; i<ary+1;i++){
 				bgo.add(i);
@@ -49,7 +46,8 @@ public class BingoMain {
 //				System.out.print(bgo.indexOf(uchs.get(j))+" ");
 //				uchs.set(j, bgo.indexOf(uchs.get(j)));
 //			}
-			System.out.println(uchs);
+//			System.out.println(uchs);
+			
 //		生牌+排版
 			for (int i=0; i < bgo.size(); i ++){
 				for (int j=0; j < uchs.size(); j ++){
@@ -64,24 +62,16 @@ public class BingoMain {
 				}
 			}
 //		找位置
-			System.out.println();
-			System.out.println(bgo.indexOf(uchs.get(0)));
-			System.out.println(uchs.size());
+//			System.out.println();
+//			System.out.println(bgo.indexOf(uchs.get(0)));
+//			System.out.println(uchs.size());
 
-		
-//			String[] ar = br.readLine().split(","); 
-//			for (int i = 0; i < ar.length; i++) { 
-//				System.out.println(ar[i]); 
-//			} 
 			
 		}catch (Exception e) {
 			System.out.println(e);
 		}
 	}
 
-	private static int bgo(int index) {
 
-		return 0;
-	}
 
 }
