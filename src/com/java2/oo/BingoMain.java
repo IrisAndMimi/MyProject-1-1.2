@@ -45,10 +45,10 @@ public class BingoMain {
 				bgo.set(chsd, tmp);
 			}
 //		標記牌編號
-			for (int j=0; j < uchs.size(); j ++){
+//			for (int j=0; j < uchs.size(); j ++){
 //				System.out.print(bgo.indexOf(uchs.get(j))+" ");
-				uchs.set(j, bgo.indexOf(uchs.get(j)));
-			}
+//				uchs.set(j, bgo.indexOf(uchs.get(j)));
+//			}
 			System.out.println(uchs);
 //		生牌+排版
 			for (int i=0; i < bgo.size(); i ++){
