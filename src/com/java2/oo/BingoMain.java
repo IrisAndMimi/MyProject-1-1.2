@@ -32,8 +32,6 @@ public class BingoMain {
 			System.out.println(uchs);
 			
 			
-			
-//			int bgo[] = new int[]{};
 			bgo = new ArrayList<Integer>();
 			for(int i=1; i<ary+1;i++){
 				bgo.add(i);
@@ -46,17 +44,32 @@ public class BingoMain {
 				bgo.set(i, chsdval);
 				bgo.set(chsd, tmp);
 			}
-			for(int i=0; i < bgo.size(); i ++){
+//		標記牌編號
+			for (int j=0; j < uchs.size(); j ++){
+//				System.out.print(bgo.indexOf(uchs.get(j))+" ");
+				uchs.set(j, bgo.indexOf(uchs.get(j)));
+			}
+			System.out.println(uchs);
+//		生牌+排版
+			for (int i=0; i < bgo.size(); i ++){
+				for (int j=0; j < uchs.size(); j ++){
+					if(bgo.get(i)==uchs.get(j)) {
+						System.out.print("*");
+					}
+				}
 				if ((i+1)%5==0){
 					System.out.println(bgo.get(i));
 				}else{
 					System.out.print(bgo.get(i)+"\t");
 				}
 			}
+//		找位置
+			System.out.println();
 			System.out.println(bgo.indexOf(uchs.get(0)));
+			System.out.println(uchs.size());
+
 		
-			String[] ar = br.readLine().split(","); 
-			
+//			String[] ar = br.readLine().split(","); 
 //			for (int i = 0; i < ar.length; i++) { 
 //				System.out.println(ar[i]); 
 //			} 
